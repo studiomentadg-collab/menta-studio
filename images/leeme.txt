@@ -1,0 +1,34 @@
+CARPETA DE IMÁGENES — Menta Studio
+==================================
+
+Reemplazá los placeholders (picsum.photos) por tus archivos reales.
+
+Archivos esperados
+------------------
+logo-menta.svg          LISTO. Es tu logo real vectorizado desde el
+                        archivo original (fidelidad 98,6%). El mismo
+                        trazado está embebido en index.html como
+                        <symbol id="menta-wordmark"> y se reutiliza en
+                        header, footer, intro, fondo del hero y en el
+                        título "Somos MENTA". Un solo dibujo, un solo peso.
+                        Para cambiar el color se usa "color" en CSS,
+                        no "fill".
+favicon.svg             Ícono del sitio.
+og-menta.jpg            Imagen para redes, 1200x630.
+about.jpg               LISTO. Foto del estudio, 1000x1777, 232 KB.
+                        El encuadre se ajusta con object-position en el CSS.
+mockup-cdmotostore.jpg  LISTO. Mockup del portfolio, 1536x1024 (3:2).
+mockup-inodorostore.jpg LISTO. Mockup del portfolio, 1536x1024 (3:2).
+mockup-erika.jpg        LISTO. Mockup del portfolio, 1536x1024 (3:2).
+                        Para cambiar cualquiera: reemplazá el archivo
+                        respetando la proporción 3:2. No hay que tocar
+                        el código.
+portfolio/reel-01.jpg   Portadas de reels (vertical 9:16, 720x1280).
+portfolio/carr-01-1.jpg Slides de carruseles (4:5, 1080x1350).
+
+Dónde se cambian
+----------------
+- Logo, about, galería y OG: en index.html (buscá "REEMPLAZAR").
+- Portadas, videos y carruseles: en js/script.js, array "portfolio".
+
+Peso recomendado: menos de 300 KB por imagen. Ideal .webp.

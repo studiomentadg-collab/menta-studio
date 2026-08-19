@@ -1,0 +1,29 @@
+CARPETA DE VIDEOS — Menta Studio
+================================
+
+reel-01.mp4  ←  campera.mp4
+reel-02.mp4  ←  robo.mp4
+reel-03.mp4  ←  3 razones.mp4
+reel-04.mp4  ←  arrugas en la piel.mp4
+reel-05.mp4  ←  2025 video cierre.mp4
+
+Todos comprimidos a 720x1280, 30 fps, H.264 + AAC, con faststart
+(empiezan a reproducirse sin esperar la descarga completa).
+Los originales pesaban 372 MB en total; acá pesan 18 MB.
+
+Las portadas están en images/reels/ y se generaron desde los
+propios videos. Si querés otra portada, reemplazá el .jpg
+manteniendo el nombre y la proporción 9:16.
+
+PARA AGREGAR UN REEL
+--------------------
+1. Comprimí el video (ffmpeg):
+   ffmpeg -i original.mp4 -vf "scale=-2:1280,fps=30" -c:v libx264 \
+     -crf 30 -preset veryfast -c:a aac -b:a 96k -movflags +faststart \
+     videos/reel-06.mp4
+2. Sacá la portada:
+   ffmpeg -ss 2 -i videos/reel-06.mp4 -frames:v 1 images/reels/reel-06-cover.jpg
+3. Sumá el objeto al array "reels" en js/script.js.
+
+Los videos NO se precargan ni se reproducen solos: se cargan
+únicamente al abrir el modal.
