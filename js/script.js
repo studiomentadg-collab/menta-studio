@@ -529,14 +529,9 @@ function initOffer(){
    Ese dato también se suma al mensaje de WhatsApp cuando el enlace lo permite. */
 function initServiceButtons(){
   $$("[data-msg]").forEach(btn => {
-    btn.addEventListener("click", () => {
-      const pick = $("#cta-pick");
-      if (pick){
-        pick.textContent = btn.dataset.msg;
-        pick.hidden = false;
-      }
-      const wa = $(".cta__action [data-wa]");
-      if (wa) wa.href = waHref(btn.dataset.msg);
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+      window.open(waHref(btn.dataset.msg), "_blank", "noopener,noreferrer");
     });
   });
 }
@@ -828,7 +823,7 @@ function initModals(){
    tu número:  const WA_LINK = "https://wa.me/5491122334455";
    El código detecta el formato y agrega el texto automáticamente.
 ----------------------------------------------------------------- */
-const WA_LINK = "https://wa.me/message/P4GQGCQYYE4SF1";
+const WA_LINK = "https://wa.me/5491123741939";
 
 const WA_TEXT = `¡Hola Menta Studio! 👋
 
