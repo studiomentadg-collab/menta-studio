@@ -28,14 +28,12 @@
    circle, camera, target
 ---------------------------------------------------------------- */
 const services = [
-  { title:"Branding",                desc:"Naming, concepto y sistema visual para que tu marca tenga una voz propia.", icon:"brand" },
-  { title:"Identidad Visual",        desc:"Logo, paleta, tipografías y manual de uso listo para aplicar.",             icon:"eye" },
-  { title:"Diseño para Redes",       desc:"Piezas mensuales con una dirección de arte coherente.",                      icon:"grid" },
-  { title:"Carruseles",              desc:"Contenido que se lee hasta el final y se guarda.",                           icon:"layers" },
-  { title:"Reels",                   desc:"Edición dinámica, subtítulos y ritmo pensado para retención.",               icon:"play" },
-  { title:"Historias",               desc:"Formatos diarios para sostener la conversación con tu comunidad.",           icon:"circle" },
-  { title:"Producción de Contenido", desc:"Sesiones de foto y video con dirección creativa incluida.",                  icon:"camera" },
-  { title:"Estrategia de Contenido", desc:"Calendario, pilares y mensajes definidos antes de diseñar.",                 icon:"target" }
+  { title:"Branding",                 desc:"Naming, concepto y sistema visual para que tu marca tenga una voz propia.", icon:"brand" },
+  { title:"Identidad Visual",         desc:"Logo, paleta, tipografías y manual de uso listo para aplicar.",             icon:"eye" },
+  { title:"Contenido para Redes",     desc:"Reels, carruseles e historias con una dirección de arte coherente.",        icon:"grid" },
+  { title:"Producción de Contenido",  desc:"Sesiones de foto y video con dirección creativa incluida.",                 icon:"camera" },
+  { title:"Estrategia de Contenido",  desc:"Calendario, pilares y mensajes definidos antes de diseñar.",                icon:"target" },
+  { title:"Diseño & Desarrollo Web",  desc:"Diseño UX/UI y desarrollo de sitios personalizados, responsive y listos para publicar.", icon:"web" }
 ];
 
 /* --- REELS ------------------------------------------------------
@@ -69,7 +67,8 @@ const icons = {
   play  : '<circle cx="12" cy="12" r="9"/><path d="M10 8.5 16 12l-6 3.5v-7Z"/>',
   circle: '<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',
   camera: '<path d="M3 8.5A2.5 2.5 0 0 1 5.5 6h2L9 4h6l1.5 2h2A2.5 2.5 0 0 1 21 8.5v8A2.5 2.5 0 0 1 18.5 19h-13A2.5 2.5 0 0 1 3 16.5v-8Z"/><circle cx="12" cy="12.5" r="3.5"/>',
-  target: '<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.4"/>'
+  target: '<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.4"/>',
+  web   : '<rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4M8.5 9.5 6.5 11l2 1.5M15.5 9.5l2 1.5-2 1.5M13.5 8l-3 6"/>'
 };
 
 

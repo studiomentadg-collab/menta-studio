@@ -455,7 +455,7 @@ h1,h2,h3,h4,.h-giant,.hero__title,.menu__link,.display{
 .services .eyebrow{opacity:.6}
 .services .section__lead{color:rgba(255,255,255,.6)}
 .cards{
-  display:grid;grid-template-columns:repeat(4,1fr);gap:1px;
+  display:grid;grid-template-columns:repeat(3,1fr);gap:1px;
   background:rgba(255,255,255,.16);border-block:1px solid rgba(255,255,255,.16)
 }
 .card{
@@ -512,6 +512,7 @@ h1,h2,h3,h4,.h-giant,.hero__title,.menu__link,.display{
 .panel--video{background:var(--black);color:var(--white)}
 .panel--branding{background:var(--pink)}
 .panel--produccion{background:var(--mint)}
+.panel--web{background:var(--white);border-top:1px solid var(--line)}
 
 .panel__head{max-width:56ch;margin-bottom:clamp(2.25rem,4vw,3.25rem)}
 .panel__title{
@@ -626,6 +627,7 @@ h1,h2,h3,h4,.h-giant,.hero__title,.menu__link,.display{
   transition:transform .55s var(--ease),box-shadow .55s var(--ease)
 }
 .prodcard:hover{transform:translateY(-8px);box-shadow:0 46px 80px -46px rgba(0,0,0,.75)}
+.prodcard--web{box-shadow:0 28px 70px -52px rgba(0,0,0,.65)}
 .prodcard__main{display:flex;flex-direction:column;align-items:flex-start;gap:1.35rem}
 .prodcard__tag{
   background:var(--mint);color:var(--black);font-size:.68rem;letter-spacing:.14em;
