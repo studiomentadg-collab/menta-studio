@@ -525,14 +525,13 @@ function initOffer(){
   }
 }
 
-/* Los botones de servicio llevan al contacto y dejan anotado qué se eligió.
-   Ese dato también se suma al mensaje de WhatsApp cuando el enlace lo permite. */
+/* Los botones de servicio abren WhatsApp en una pestaña nueva.
+   La página de Menta queda exactamente en la misma posición. */
 function initServiceButtons(){
-  $$("[data-msg]").forEach(btn => {
-    btn.addEventListener("click", (e) => {
-      e.preventDefault();
-      window.open(waHref(btn.dataset.msg), "_blank", "noopener,noreferrer");
-    });
+  $$('[data-msg]').forEach(btn => {
+    btn.href = waHref(btn.dataset.msg);
+    btn.target = '_blank';
+    btn.rel = 'noopener noreferrer';
   });
 }
 
@@ -846,21 +845,15 @@ function waHref(extra){
 }
 
 function initWhatsapp(){
-  $$("[data-wa]").forEach(a => { a.href = waHref(); });
-
-  /* Botón flotante: aparece al dejar atrás la primera pantalla */
-  const float = $(".wa-float");
-  if (!float) return;
-
-  if (REDUCED){
-    float.classList.add("is-visible");
-    return;
-  }
-  ScrollTrigger.create({
-    start: 500,
-    end: "max",
-    onUpdate(self){ float.classList.toggle("is-visible", self.scroll() > 500); }
+  $$('[data-wa]').forEach(a => {
+    a.href = waHref();
+    a.target = '_blank';
+    a.rel = 'noopener noreferrer';
   });
+
+  /* El botón flotante queda visible desde la primera pantalla y durante toda la navegación. */
+  const float = $('.wa-float');
+  if (float) float.classList.add('is-visible');
 }
 
 function initYear(){
