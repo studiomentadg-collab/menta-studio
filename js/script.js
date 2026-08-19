@@ -825,21 +825,23 @@ function initModals(){
 ----------------------------------------------------------------- */
 const WA_LINK = "https://wa.me/5491123741939";
 
-const WA_TEXT = `¡Hola Menta Studio! 👋
+const WA_TEXT = `¡Hola Menta Studio!
 
-Vi su página web y me gustaría recibir información sobre sus servicios.
+Vi su página web y me gustaría recibir información sobre sus servicios.`;
 
-Quisiera conocer más sobre:
-
-____________________
-
-Muchas gracias.`;
-
-/* Arma el enlace final: si es un enlace por número, le suma el mensaje */
+/* Arma el enlace final. Si se eligió un servicio, lo inserta en el lugar correcto. */
 function waHref(extra){
   const porNumero = !WA_LINK.includes("/message/");
   if (!porNumero) return WA_LINK;
-  const texto = extra ? `${WA_TEXT}\n\n${extra}` : WA_TEXT;
+
+  const detalle = extra
+    ? extra.replace(/^Hola, me interesa\s*/i, "").replace(/\.$/, "")
+    : "";
+
+  const texto = detalle
+    ? `${WA_TEXT}\n\nQuisiera conocer más sobre: ${detalle}.\n\nMuchas gracias.`
+    : `${WA_TEXT}\n\nMuchas gracias.`;
+
   return `${WA_LINK}?text=${encodeURIComponent(texto)}`;
 }
 
